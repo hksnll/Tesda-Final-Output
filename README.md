@@ -1,6 +1,6 @@
-# Hotel Booking System
+# Hotel Reservation System
 
-This project is a simple Java-based hotel booking system using JDBC and BCrypt for password management. The application allows users to sign up, log in, view available rooms, book rooms, and view their bookings.
+This project is a simple Java-based hotel reservation system using JDBC and BCrypt for password management. The application allows users to sign up, log in, view available rooms, reserve rooms, and view their reservations.
 
 ## Table of Contents
 - [Features](#features)
@@ -14,8 +14,8 @@ This project is a simple Java-based hotel booking system using JDBC and BCrypt f
 ## Features
 - User Authentication (Sign Up and Login)
 - View Available Rooms
-- Book Rooms
-- View User Bookings
+- Reserve Rooms
+- View User Reservations
 
 ## Getting Started
 
@@ -30,7 +30,7 @@ Follow these instructions to set up the project locally.
 ### Installation
 1. **Clone the repository**
     ```bash
-    git clone https://github.com/yourusername/hotel-booking-system.git
+    git clone https://github.com/hksnll/Tesda-Final-Output.git
     ```
 
 2. **Navigate to the project directory**
@@ -72,9 +72,9 @@ Follow these instructions to set up the project locally.
 
     -- Insert sample rooms
   INSERT INTO Rooms (room_number, type, price_per_night, availability) VALUES
-  ('101', 'Single', 50.00, TRUE),
-  ('102', 'Double', 75.00, TRUE),
-  ('103', 'Deluxe', 100.00, TRUE);
+  ('101', 'Single', 1600.00, TRUE),
+  ('102', 'Double', 2500.00, TRUE),
+  ('103', 'Deluxe', 3500.00, TRUE);
     ```
     
 
@@ -88,8 +88,8 @@ Follow these instructions to set up the project locally.
     - **Sign Up Users**: Create new user accounts.
     - **Login**: Log in with existing user credentials.
     - **View Available Rooms**: Check available rooms in the hotel.
-    - **Book Rooms**: Book available rooms.
-    - **View Bookings**: View all bookings made by a user.
+    - **Reserve Rooms**: Book available rooms.
+    - **View Reservations**: View all bookings made by a user.
 
 ## Technologies Used
 - **Java 21:** The main programming language.
