@@ -69,13 +69,16 @@ Follow these instructions to set up the project locally.
         FOREIGN KEY (user_id) REFERENCES users(id),
         FOREIGN KEY (room_id) REFERENCES rooms(id)
     );
-
-    -- Insert sample rooms
-  INSERT INTO Rooms (room_number, type, price_per_night, availability) VALUES
-  ('101', 'Single', 1600.00, TRUE),
-  ('102', 'Double', 2500.00, TRUE),
-  ('103', 'Deluxe', 3500.00, TRUE);
     ```
+
+5. **Insert Rooms**
+    ```sql
+    INSERT INTO Rooms (room_number, type, price_per_night, availability) VALUES
+        ('101', 'Single', 1600.00, TRUE),
+        ('102', 'Double', 2500.00, TRUE),
+        ('103', 'Deluxe', 3500.00, TRUE);
+    ```
+    
     
 
 ## Usage
