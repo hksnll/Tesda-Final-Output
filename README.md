@@ -101,6 +101,6 @@ Follow these instructions to set up the project locally.
 - **MySQL:** As the relational database.
 
 ## Acknowledgments
-- This project was inspired by the need for a simple, yet practical hotel booking system for learning purposes.
+- This project was inspired by the need for a simple, yet practical hotel reservation system for learning purposes.
 - Thanks to [BCrypt](https://www.mindrot.org/projects/jBCrypt/) for providing the hashing library.
 - [JetBrains](https://www.jetbrains.com/) for providing an excellent IDE (IntelliJ IDEA).
