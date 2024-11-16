@@ -109,7 +109,7 @@ public class UserDAOImplementation implements UserDAO {
         }
 
         String query = "INSERT INTO bookings(user_id, room_id, start_date, end_date) VALUES (?, ?, ?, ?)";
-        String updateRoomQuery = "UPDATE rooms SET available=false WHERE id=?";
+        String updateRoomQuery = "UPDATE rooms SET availability=false WHERE id=?";
         try (Connection connection = connect();
              PreparedStatement bookStatement = connection.prepareStatement(query);
              PreparedStatement updateRoomStatement = connection.prepareStatement(updateRoomQuery)) {
@@ -129,7 +129,7 @@ public class UserDAOImplementation implements UserDAO {
     }
 
     private boolean isRoomAvailable(int roomId) {
-        String query = "SELECT * FROM rooms WHERE id=? AND available=true";
+        String query = "SELECT * FROM rooms WHERE id=? AND availability=true";
         try (Connection connection = connect();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, roomId);
@@ -169,7 +169,7 @@ public class UserDAOImplementation implements UserDAO {
     @Override
     public void cancelBooking(int bookingId) {
         String query = "DELETE FROM bookings WHERE id=?";
-        String updateRoomQuery = "UPDATE rooms SET available=true WHERE id=(SELECT room_id FROM bookings WHERE id=?)";
+        String updateRoomQuery = "UPDATE rooms SET availability=true WHERE id=(SELECT room_id FROM bookings WHERE id=?)";
         try (Connection connection = connect();
              PreparedStatement deleteStatement = connection.prepareStatement(query);
              PreparedStatement updateRoomStatement = connection.prepareStatement(updateRoomQuery)) {
@@ -187,7 +187,7 @@ public class UserDAOImplementation implements UserDAO {
 
 
     public void addRoom(Room room) {
-        String query = "INSERT INTO rooms(room_number, type, price_per_night, available) VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO rooms(room_number, type, price_per_night, availability) VALUES (?, ?, ?, ?)";
         try (Connection connection = connect();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, room.getRoomNumber());

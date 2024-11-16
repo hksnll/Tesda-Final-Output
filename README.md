@@ -10,6 +10,7 @@ This project is a simple Java-based hotel reservation system using JDBC and BCry
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Acknowledgments](#acknowledgments)
+- [Developers](#developers)
 
 ## Features
 - User Authentication (Sign Up and Login)
@@ -104,3 +105,9 @@ Follow these instructions to set up the project locally.
 - This project was inspired by the need for a simple, yet practical hotel reservation system for learning purposes.
 - Thanks to [BCrypt](https://www.mindrot.org/projects/jBCrypt/) for providing the hashing library.
 - [JetBrains](https://www.jetbrains.com/) for providing an excellent IDE (IntelliJ IDEA).
+
+## Developers
+- Macalintal, Hannah
+- Plaza, Lemwell
+- Rodriguez, Leah
+- Villacora, Joel Jr.
